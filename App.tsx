@@ -56,27 +56,27 @@ const App: React.FC = () => {
 
     return (
         <div className="min-h-screen container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
-            <header className="sticky top-0 z-10 bg-gray-50/80 backdrop-blur-sm text-center py-2">
+            <header className="sticky top-0 z-10 bg-gray-50/90 backdrop-blur-sm text-center py-3 border-b border-gray-200/50">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 animate-fade-in">
                     Deep Craft
                 </h1>
-                <p className="mt-3 text-lg md:text-xl text-gray-600 animate-fade-in-delay opacity-0 fill-mode-forwards">
+                <p className="mt-2 text-lg md:text-xl text-gray-600 animate-fade-in-delay opacity-0 fill-mode-forwards">
                     A Framework for Strategic Innovation
                 </p>
             </header>
             
-            <main className="grid grid-cols-1 lg:grid-cols-2 gap-16 flex-grow">
+            <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 flex-grow">
                 {/* Visualization container: made sticky below the header */}
-                <div className="sticky top-20 lg:h-[calc(100vh-5rem)] flex items-start lg:items-center justify-center pt-4 lg:pt-0">
+                <div className="sticky top-32 lg:top-36 h-[60vh] lg:h-[calc(100vh-10rem)] flex items-center justify-center py-4">
                     <Visualization activeStep={activeStep} scale={scale} />
                 </div>
-                <div className="relative z-0 lg:py-12">
+                <div className="relative z-0 py-8 lg:py-16">
                     <ScrollContent steps={STEPS} activeStep={activeStep} stepRefs={stepRefs} />
-                    {/* Add a spacer to ensure the final step can be centered without the visualization scrolling away */}
-                    <div className="h-screen" />
+                    {/* Add a spacer to ensure the final step can be centered */}
+                    <div className="h-[80vh]" />
                 </div>
             </main>
-            <footer className="text-center py-8 text-gray-500 text-sm">
+            <footer className="text-center py-6 px-4 text-gray-500 text-sm bg-gray-50/80 backdrop-blur-sm border-t border-gray-200/50">
                 <p>
                     The Deep Craft framework was developed by Venkatesh Narayanamurti and Jeffrey Y. Tsao.
                 </p>
