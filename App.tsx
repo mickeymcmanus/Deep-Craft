@@ -49,38 +49,38 @@ const App: React.FC = () => {
     // The zoom completes on the last meaningful content step.
     const lastContentStepId = STEPS.find(s => s.title === "The Power of the Framework")?.id || 9;
     const progress = Math.min(activeStep / lastContentStepId, 1);
-    const initialScale = 0.65;
-    const finalScale = 1.0;
+    const initialScale = 0.75;
+    const finalScale = 0.95;
     const scale = initialScale + (finalScale - initialScale) * progress;
 
 
     return (
         <div className="min-h-screen container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
-            <header className="sticky top-0 z-10 bg-gray-50/90 backdrop-blur-sm text-center py-3 border-b border-gray-200/50">
+            <header className="sticky top-0 z-10 bg-gray-50/90 backdrop-blur-sm text-center py-2 border-b border-gray-200/50">
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 animate-fade-in">
                     Deep Craft
                 </h1>
-                <p className="mt-2 text-lg md:text-xl text-gray-600 animate-fade-in-delay opacity-0 fill-mode-forwards">
+                <p className="mt-1 text-lg md:text-xl text-gray-600 animate-fade-in-delay opacity-0 fill-mode-forwards">
                     A Framework for Strategic Innovation
                 </p>
             </header>
             
             <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 flex-grow">
                 {/* Visualization container: made sticky below the header */}
-                <div className="sticky top-32 h-[calc(100vh-12rem)] flex items-center justify-center py-8">
+                <div className="sticky top-28 h-[calc(100vh-10rem)] flex items-center justify-center py-4">
                     <Visualization activeStep={activeStep} scale={scale} />
                 </div>
                 <div className="relative z-0 py-16">
                     <ScrollContent steps={STEPS} activeStep={activeStep} stepRefs={stepRefs} />
                     {/* Add a spacer to ensure the final step can be centered */}
-                    <div className="h-[calc(100vh-16rem)]" />
+                    <div className="h-[calc(100vh-12rem)]" />
                 </div>
             </main>
-            <footer className="text-center py-6 px-4 text-gray-500 text-sm bg-gray-50/90 backdrop-blur-sm border-t border-gray-200/50 mt-auto">
+            <footer className="text-center py-4 px-4 text-gray-500 text-sm bg-gray-50/90 backdrop-blur-sm border-t border-gray-200/50 mt-auto">
                 <p>
                     The Deep Craft framework was developed by Venkatesh Narayanamurti and Jeffrey Y. Tsao.
                 </p>
-                <p className="mt-1">
+                <p className="mt-0.5">
                     It is detailed in their book,{' '}
                     <a 
                         href="https://www.hup.harvard.edu/books/9780674971844" 
