@@ -50,7 +50,7 @@ const App: React.FC = () => {
     const lastContentStepId = STEPS.find(s => s.title === "The Power of the Framework")?.id || 9;
     const progress = Math.min(activeStep / lastContentStepId, 1);
     const initialScale = 0.75;
-    const finalScale = 0.95;
+    const finalScale = 0.88;
     const scale = initialScale + (finalScale - initialScale) * progress;
 
 
@@ -76,11 +76,11 @@ const App: React.FC = () => {
                     <div className="h-[calc(100vh-12rem)]" />
                 </div>
             </main>
-            <footer className="text-center py-4 px-4 text-gray-500 text-sm bg-gray-50/90 backdrop-blur-sm border-t border-gray-200/50 mt-auto">
+            <footer className="text-center py-3 px-4 text-gray-500 text-sm mt-auto">
                 <p>
                     The Deep Craft framework was developed by Venkatesh Narayanamurti and Jeffrey Y. Tsao.
                 </p>
-                <p className="mt-0.5">
+                <p className="mt-0">
                     It is detailed in their book,{' '}
                     <a 
                         href="https://www.hup.harvard.edu/books/9780674971844" 
