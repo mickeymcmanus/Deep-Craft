@@ -67,16 +67,16 @@ const App: React.FC = () => {
             
             <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 flex-grow">
                 {/* Visualization container: made sticky below the header */}
-                <div className="sticky top-36 lg:top-40 h-[40vh] lg:h-[50vh] flex items-center justify-center py-4">
+                <div className="sticky top-32 h-[calc(100vh-12rem)] flex items-center justify-center py-8">
                     <Visualization activeStep={activeStep} scale={scale} />
                 </div>
-                <div className="relative z-0 py-8 lg:py-16">
+                <div className="relative z-0 py-16">
                     <ScrollContent steps={STEPS} activeStep={activeStep} stepRefs={stepRefs} />
                     {/* Add a spacer to ensure the final step can be centered */}
-                    <div className="h-[60vh]" />
+                    <div className="h-[calc(100vh-16rem)]" />
                 </div>
             </main>
-            <footer className="text-center py-6 px-4 text-gray-500 text-sm bg-gray-50/80 backdrop-blur-sm border-t border-gray-200/50">
+            <footer className="text-center py-6 px-4 text-gray-500 text-sm bg-gray-50/90 backdrop-blur-sm border-t border-gray-200/50 mt-auto">
                 <p>
                     The Deep Craft framework was developed by Venkatesh Narayanamurti and Jeffrey Y. Tsao.
                 </p>
