@@ -62,7 +62,7 @@ export const Visualization: React.FC<VisualizationProps> = ({ activeStep, scale 
 
     return (
         <div 
-            className="w-full max-w-md lg:max-w-lg aspect-square relative text-sm sm:text-base transition-transform duration-700 ease-in-out mx-auto"
+            className="w-full max-w-xs sm:max-w-md lg:max-w-lg aspect-square relative text-sm sm:text-base transition-transform duration-700 ease-in-out mx-auto"
             style={{ transform: `scale(${scale})` }}
             role="graphics-document"
             aria-label="A 2 by 2 grid for the Deep Craft framework."

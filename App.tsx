@@ -67,13 +67,13 @@ const App: React.FC = () => {
             
             <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 flex-grow">
                 {/* Visualization container: made sticky below the header */}
-                <div className="sticky top-32 lg:top-36 h-[60vh] lg:h-[calc(100vh-10rem)] flex items-center justify-center py-4">
+                <div className="sticky top-36 lg:top-40 h-[40vh] lg:h-[50vh] flex items-center justify-center py-4">
                     <Visualization activeStep={activeStep} scale={scale} />
                 </div>
                 <div className="relative z-0 py-8 lg:py-16">
                     <ScrollContent steps={STEPS} activeStep={activeStep} stepRefs={stepRefs} />
                     {/* Add a spacer to ensure the final step can be centered */}
-                    <div className="h-[80vh]" />
+                    <div className="h-[60vh]" />
                 </div>
             </main>
             <footer className="text-center py-6 px-4 text-gray-500 text-sm bg-gray-50/80 backdrop-blur-sm border-t border-gray-200/50">
